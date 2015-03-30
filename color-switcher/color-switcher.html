@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Color Switcher</title>
+</head>
+
+<body>
+
+<style type="text/css">
+	* {
+		list-style: none;
+		box-sizing: border-box;
+	}
+	body {
+		text-align: center;
+		font-family: Avenir;
+	}
+	li {
+		border: 2px solid black;
+		display: inline-block;
+		height: 100px;
+		width: 100px;
+		border-radius: 50px;
+
+	}
+
+	.green {
+		background-color: green;
+	}
+
+	.salmon {
+		background-color: salmon;
+	}
+	.purple {
+		background-color: purple;
+	}
+	.yellow {
+		background-color: yellow;
+	}
+	.pink {
+		background-color: pink;
+	}
+	.teal {
+		background-color: teal;
+	}
+
+</style>
+
+<ul>
+	<li class="green"></li>
+	<li class="salmon"></li>
+	<li class="purple"></li>
+	<li class="yellow"></li>
+	<li class="pink"></li>
+	<li class="teal"></li>
+</ul>
+
+<h1>Color Swither</h1>
+<p>Click on a color swatch to change the page color!</p>
+
+</body>
+
+<script type="text/javascript">
+
+//Method 1.
+	// var body = document.querySelector("body")
+	// var green = document.querySelector(".green")
+	// var salmon = document.querySelector(".salmon")
+	// var purple = document.querySelector(".purple")
+	// var yellow = document.querySelector(".yellow")
+
+	// green.addEventListener("click", turnBodyGreen)
+	// salmon.addEventListener("click", turnBodySalmon)
+	// purple.addEventListener("click", turnBodyPurple)
+	// yellow.addEventListener("click", turnBodyYellow)
+
+	// function turnBodyGreen() {
+	// 	body.setAttribute("class", "green")
+	// } 
+
+	// function turnBodySalmon() {
+	// 	body.setAttribute("class", "salmon")
+	// }
+
+	// function turnBodyPurple() {
+	// 	body.setAttribute("class", "purple")
+	// }
+
+	// function turnBodyYellow() {
+	// 	body.setAttribute("class", "yellow")
+	// }
+
+	var list = document.querySelector("ul")
+	var body = document.querySelector("body")
+
+	list.addEventListener("click", changeColor)
+
+	function changeColor(event) {
+		var elem = event.target
+		var color = elem.getAttribute("class")
+		body.setAttribute("class", color)
+	}
+
+
+
+
+
+
+</script>
+</html>
